@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:octtaview/screens/home/verification_page.dart';
 import '../../navigation/app_drawer.dart';
 import '../../resources/color.dart';
 
@@ -98,35 +99,40 @@ class _homepageState extends State<homepage> {
 
             SizedBox(height: 20,),
 
-            Container(
-              height: 35,
-              width: 220,
-              decoration:BoxDecoration(
-                borderRadius: BorderRadius.all(
-                    Radius.circular(10)
-                ),
-                gradient: LinearGradient(
-                  colors: [yellow, yellow2], // Specify your gradient colors
-                  begin: Alignment.topCenter, // Specify the alignment of the gradient (start from the left)
-                  end: Alignment.bottomCenter, // Specify the alignment of the gradient (end at the right)
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Verification Pending",style: TextStyle(color: btnttext),),
-
-                  SizedBox(width: 10),
-
-                  SvgPicture.asset(
-                    'assets/svg/timeicon.svg',
-                    width: 18,
-                    height: 18,
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => verificationpage()));
+              },
+              child: Container(
+                height: 35,
+                width: 220,
+                decoration:BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(10)
                   ),
+                  gradient: LinearGradient(
+                    colors: [yellow, yellow2], // Specify your gradient colors
+                    begin: Alignment.topCenter, // Specify the alignment of the gradient (start from the left)
+                    end: Alignment.bottomCenter, // Specify the alignment of the gradient (end at the right)
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Verification Pending",style: TextStyle(color: btnttext),),
 
-                ],
+                    SizedBox(width: 10),
+
+                    SvgPicture.asset(
+                      'assets/svg/timeicon.svg',
+                      width: 18,
+                      height: 18,
+                    ),
+
+                  ],
+                ),
+
               ),
-
             ),
 
             SizedBox(height: 35,),
