@@ -114,6 +114,7 @@ const bordergreen = Color.fromRGBO(2, 109, 169, 1);
 const yellow = Color.fromRGBO(200, 150, 27, 1);
 const yellow2 = Color.fromRGBO(145, 99, 8, 1);
 const bottomtabclr = Color.fromRGBO(39, 29, 5, 1);
+const textcolor2 = Color.fromRGBO(255, 153, 0, 1);
 const btnttext = Color.fromRGBO(235, 207, 165, 1);
 const greycolor = Color.fromRGBO(245, 245, 245, 1);
 const buttoncolor = Color.fromRGBO(2, 109, 169, 1);
